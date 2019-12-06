@@ -1,0 +1,53 @@
+version: '3'
+services:
+  admin_1:
+    container_name: xxljob_admin_1
+    build:
+      context: ./xxl-job-admin
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    expose:
+      - 80
+    restart: on-failure:3
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/xxl_job?Unicode=true&characterEncoding=UTF-8&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    networks:
+      - job_net
+  admin_2:
+    container_name: xxljob_admin_2
+    build:
+      context: ./xxl-job-admin
+      dockerfile: Dockerfile
+    ports:
+      - 8081:80
+    expose:
+      - 80
+    restart: on-failure:3
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/xxl_job?Unicode=true&characterEncoding=UTF-8&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    networks:
+      - job_net
+  admin_3:
+    container_name: xxljob_admin_3
+    build:
+      context: ./xxl-job-admin
+      dockerfile: Dockerfile
+    ports:
+      - 8082:80
+    expose:
+      - 80
+    restart: on-failure:3
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/xxl_job?Unicode=true&characterEncoding=UTF-8&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    networks:
+      - job_net
+networks:
+  job_net:
+    external: true

@@ -1,0 +1,28 @@
+version: "3.0"
+services:
+  mysql:
+    image: mariadb:10.4.10-bionic
+    container_name: xxljob_db
+    ports:
+      - 3306:3306
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_DATABASE=xxl_job"
+      - "MYSQL_ROOT_HOST=%"
+    command: [
+      'mysqld',
+      '--innodb-flush-method=fsync',
+      '--innodb-buffer-pool-size=20M',
+      '--character-set-server=utf8mb4',
+      '--collation-server=utf8mb4_unicode_ci',
+      '--default-time-zone=+8:00',
+      '--lower-case-table-names=1'
+    ]
+    volumes:
+      - ./doc/db/tables_xxl_job.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mariadb/data:/var/lib/mysql
+    networks:
+      - job_net
+networks:
+  job_net:
+    external: true

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  openresty:
+    image: openresty/openresty:1.15.8.2-5-alpine-fat
+    container_name: openresty
+    ports:
+      - 80:80
+    expose:
+      - 80
+    restart: on-failure:3
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - job_net
+networks:
+  job_net:
+    external: true
