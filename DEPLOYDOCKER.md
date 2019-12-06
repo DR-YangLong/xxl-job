@@ -1,7 +1,7 @@
 # Docker快速部署
 通过docker快速进行本机部署，方便进行预研。部署仅为数据库与admin。其中数据库仅部署一个实例。admin部署3个实例。openresty/nginx一个实例。  
 3个admin通过nginx进行负载，模拟集群方式，其中2为主，1为备。        
-执行client部署参照[此处](#client)。  
+执行client部署参照[此处](#client执行项目部署)。  
 admin启动后，默认端口为8080,8081,8082。   
 nginx默认端口为80。   
 mariadb为3306。
@@ -37,7 +37,7 @@ mariadb为3306。
 ### nginx
 nginx配置在项目nginx目录下，openresty启动nginx时，会加载此目录下conf.d里的所有配置文件。
 
-## client执行项目部署{#client}
+## client执行项目部署
 
 ### IDE中使用不同的环境变量启动多个组成本地集群。
 如：
