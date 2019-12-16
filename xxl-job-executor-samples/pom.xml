@@ -17,6 +17,7 @@
         <module>xxl-job-executor-sample-jfinal</module>
         <module>xxl-job-executor-sample-nutz</module>
 		<module>xxl-job-executor-sample-jboot</module>
+        <module>xxl-job-executor-sample-starter-springboot</module>
     </modules>
 
 </project>

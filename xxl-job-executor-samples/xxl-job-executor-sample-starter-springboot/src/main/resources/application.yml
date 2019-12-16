@@ -1,0 +1,17 @@
+xxl:
+  job:
+    access-token:
+    admin-address: http://127.0.0.1/xxl-job-admin
+    executor:
+      app-name: stater-test
+      port: 9001
+      ip:
+      log-path: logs/
+      logRetentionDays: 15
+logging:
+  config: classpath:logback.xml
+spring:
+  application:
+    name: jobclient
+server:
+  port: 9000

@@ -1,0 +1,42 @@
+{
+  "properties": [
+    {
+      "name": "xxl.job.adminAddress",
+      "type": "java.net.InetAddress",
+      "sourceType": "com.xxl.job.client.spring.boot.autoconfigure.ClientProperties",
+      "description": "admin服务器地址."
+    },
+    {
+      "name": "xxl.job.accessToken",
+      "type": "java.lang.String",
+      "sourceType": "com.xxl.job.client.spring.boot.autoconfigure.ClientProperties",
+      "description": "admin配置的通讯验证token."
+    },
+    {
+      "name": "xxl.job.executor.ip",
+      "type": "java.lang.String",
+      "sourceType": "com.xxl.job.client.spring.boot.autoconfigure.ClientProperties$Executor",
+      "description": "client的ip地址,当运行在容器中时使用."
+    },
+    {
+      "name": "xxl.job.executor.port",
+      "type": "java.lang.Integer",
+      "defaultValue": 9999,
+      "sourceType": "com.xxl.job.client.spring.boot.autoconfigure.ClientProperties$Executor",
+      "description": "client运行RPC组件的端口号."
+    },
+    {
+      "name": "xxl.job.executor.logPath",
+      "type": "java.lang.String",
+      "sourceType": "com.xxl.job.client.spring.boot.autoconfigure.ClientProperties$Executor",
+      "description": "client保存日志的文件夹位置."
+    },
+    {
+      "name": "xxl.job.executor.logRetentionDays",
+      "type": "java.lang.Integer",
+      "defaultValue": 30,
+      "sourceType": "com.xxl.job.client.spring.boot.autoconfigure.ClientProperties$Executor",
+      "description": "client保存日志的天数."
+    }
+  ]
+}
