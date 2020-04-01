@@ -1,10 +1,11 @@
 #
-# XXL-JOB v2.1.2-SNAPSHOT
+# XXL-JOB v2.2.0-SNAPSHOT
 # Copyright (c) 2015-present, xuxueli.
 
 CREATE database if NOT EXISTS `xxl_job` default character set utf8mb4 collate utf8mb4_unicode_ci;
 use `xxl_job`;
 
+SET NAMES utf8mb4;
 
 CREATE TABLE `xxl_job_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
