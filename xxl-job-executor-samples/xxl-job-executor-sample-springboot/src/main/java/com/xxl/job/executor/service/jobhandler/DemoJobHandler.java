@@ -2,7 +2,7 @@ package com.xxl.job.executor.service.jobhandler;
 
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;
-import com.xxl.job.core.handler.annotation.JobHandler;
+import com.xxl.job.core.handler.annotation.XxlJob;
 import com.xxl.job.core.log.XxlJobLogger;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +22,6 @@ import java.util.zip.DataFormatException;
  *
  * @author xuxueli 2015-12-19 19:43:36
  */
-@JobHandler(value="demoJobHandler")
 @Component
 public class DemoJobHandler extends IJobHandler {
 
