@@ -2,7 +2,6 @@ package com.xxl.job.executor.job;
 
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;
-import com.xxl.job.core.handler.annotation.JobHandler;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -14,7 +13,6 @@ import java.time.format.DateTimeFormatter;
  * @author Dr.YangLong
  * @date 2019-12-16
  */
-@JobHandler(value="starterJob")
 @Component
 public class CommandLineJob extends IJobHandler{
 
